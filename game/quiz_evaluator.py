@@ -1,18 +1,10 @@
 class QuizEvaluator:
 
-    def evaluate(self, game_session):
+    def evaluate_api(self, game_session, answers):
         score = 0
 
-        for q in game_session.questions:
-            print("\n" + q.question)
-
-            for i, option in enumerate(q.options):
-                print(f"{chr(65+i)}) {option}")
-
-            user_answer = input().strip().upper()
-            selected_option = q.options[ord(user_answer) - 65]
-
-            if selected_option == q.answer:
+        for i, q in enumerate(game_session.questions):
+            if answers[i] == q.answer:
                 score += 1
 
         game_session.score = score
