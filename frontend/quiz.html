@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Quiz</title>
+</head>
+<body>
+
+<h2>Quiz Game</h2>
+
+<!-- GAME INFO -->
+<p><strong>Game ID:</strong> <span id="game-id"></span></p>
+<p><strong>Question:</strong> <span id="question-number"></span></p>
+
+<hr>
+
+<!-- QUESTION AREA -->
+<div id="question-area">
+    <h3 id="question-text"></h3>
+
+    <form id="options-form">
+        <!-- Options will be injected dynamically -->
+    </form>
+
+    <button id="submit-btn" onclick="submitAnswer()">
+        Submit Answer
+    </button>
+</div>
+
+<!-- WAITING MESSAGE -->
+<p id="waiting-message" style="display:none;">
+    ⏳ Waiting for other player to submit...
+</p>
+
+<hr>
+
+<!-- RESULT AREA -->
+<div id="result-area" style="display:none;">
+    <h2>Game Over</h2>
+    <p id="result-message"></p>
+
+    <p><strong>Your Score:</strong> <span id="your-score"></span></p>
+    <p><strong>Opponent Score:</strong> <span id="opponent-score"></span></p>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/quiz.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Quiz Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <h1>🎯 AI Quiz Game</h1>
+
+    <!-- Create Game -->
+    <h2>Create Game</h2>
+    <input type="text" id="create-name" placeholder="Your Name" />
+    <select id="topic">
+        <option value="SQL">SQL</option>
+        <option value="JAVA">Java</option>
+    </select>
+    <button onclick="createGame()">Create Game</button>
+
+    <p id="create-message"></p>
+   <p><strong>Game ID:</strong> <span id="game-id-display"></span></p>
+
+
+    <hr>
+
+    <!-- Join Game -->
+    <h2>Join Game</h2>
+    <input type="text" id="join-name" placeholder="Your Name" />
+    <input type="text" id="join-game-id" placeholder="Game ID" />
+    <button onclick="joinGame()">Join Game</button>
+
+    <p id="join-message"></p>
+
+    <script src="js/config.js"></script>
+    <script src="js/create.js"></script>
+    <script src="js/join.js"></script>
+
+</body>
+</html>
